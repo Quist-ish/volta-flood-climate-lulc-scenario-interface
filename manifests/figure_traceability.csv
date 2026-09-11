@@ -1,0 +1,6 @@
+item,data,script,note
+Main study-area figure,locked GRDC_VOLTA_POLITICAL_TRANSBOUNDARY_BASIN + contextual layers,publication figure-generation code from local project; collected by builder,Exact map artwork should be archived with accepted manuscript
+Factorial/interface figure,RAW + Direct-Hou factorial tables,02/03 reproduction scripts,Use locked manuscript figure or regenerate from reproduced CSVs
+Supplement GFD support figure,V10.1C support exports,V10.1 exact/canonical scripts,Same-source observation support
+Supplement Core-7 dependence figure,RAW factorial,05_reproduce_core7_dependence.py,Correlation matrix and weights
+Supplement applicability figure,historical + RAW factorial,04_reproduce_applicability_domain.py,"Strict/minmax, P01–P99, Mahalanobis"

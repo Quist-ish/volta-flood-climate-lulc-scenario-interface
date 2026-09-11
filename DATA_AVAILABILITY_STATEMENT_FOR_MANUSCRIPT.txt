@@ -1,0 +1,35 @@
+DATA AVAILABILITY STATEMENT (paste into the manuscript's Data Availability section)
+
+The historical feature table, out-of-fold predictions, factorial decomposition
+outputs (harmonized, reconstructed, and Direct-Hou), threshold-sensitivity
+results, applicability-domain diagnostics, Core-7 dependence weights, the
+predictor correlation matrix, and all code needed to reproduce the paper's
+reported numerical results are available at
+https://github.com/Quist-ish/volta-flood-climate-lulc-scenario-interface
+and archived with a permanent identifier at Zenodo
+(DOI: [insert upon deposit — see ZENODO_UPLOAD_CHECKLIST.md]).
+
+Third-party source datasets (CHIRPS, ERA5-Land, NEX-GDDP-CMIP6, the Global
+Flood Database, JRC Global Surface Water, MERIT Hydro, MODIS MCD12Q1, the
+Hou et al. (2022) future land-use/land-cover projections, WorldPop,
+OpenStreetMap, and the GRDC Major River Basins boundary product) are not
+redistributed in the repository. Exact product versions, access dates, and
+provider citations are listed in the repository's manifests
+(manifests/external_data_sources.csv); these datasets should be obtained
+directly from their original providers under their respective licenses
+(see DATA_LICENSE_NOTICE.md).
+
+The repository distinguishes, without fabrication, which components of the
+analysis were independently re-executed and verified from the deposited
+archive and which require the corresponding author's local project
+environment to regenerate from raw provider data (see RELEASE_STATUS.md).
+
+CODE AVAILABILITY STATEMENT (if requested separately by the journal)
+
+All analysis and reproduction code is available at the repository above
+under the MIT License (see LICENSE), including scripts to reproduce the
+historical validation, the factorial decomposition under both LULC
+interfaces, the applicability-domain diagnostics, the Core-7 dependence
+weighting, the precipitation-tail sensitivity, and the threshold-sensitivity
+analysis (code/reproduce/). Original analysis scripts are additionally
+preserved unmodified under code/exact/ for full provenance.

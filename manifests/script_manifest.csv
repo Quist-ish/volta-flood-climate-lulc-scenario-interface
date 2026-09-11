@@ -1,0 +1,13 @@
+script,purpose,inputs,outputs,provenance
+00_common.py,canonical release helper,analysis-ready data + paths,shared helper functions,canonical
+01_reproduce_historical_validation.py,historical OOF metrics,OOF predictions,validation_reproduced.csv,canonical
+02_reproduce_factorial_headlines.py,corrected model-first factorial headline,RAW factorial,factorial_headline_reproduced.csv,canonical
+03_reproduce_lulc_interface.py,harmonized/reconstructed/Direct-Hou interface sensitivity,three factorial prediction tables,interface_reproduced.csv,canonical
+04_reproduce_applicability_domain.py,future feature-domain shift,historical + RAW factorial,applicability_reproduced.csv,canonical
+05_reproduce_core7_dependence.py,Core-7 response correlation/effective-rank/weights,RAW factorial,core7_* outputs,canonical
+06_reproduce_observation_support.py,GFD support sensitivity offline reconstruction,historical + OOF + seven V10.1C exports,observation_support_reproduced.csv,canonical; exports copied by builder
+07_reproduce_paired_shap.py,Tree SHAP paired SSP diagnostics,frozen joblib + RAW factorial,paired_shap outputs,canonical; computationally expensive
+Objective3_V10_01_GFD_OBSERVATION_SUPPORT.py,original V10.1 Earth Engine support workflow,historical + OOF + EE assets,V10.1 support exports,exact recovered script
+RUN_V10_01_GFD.ps1,V10.1 launcher,Windows project tree,V10.1 execution,exact recovered launcher
+08_reproduce_tail_sensitivity.py,RAW/CAP500/EXCLUDE500 frozen-model factorial sensitivity,three V7 factorial tables,tail_treatment_factorial_headlines.csv,canonical
+09_reproduce_threshold_sensitivity.py,threshold sensitivity p=0.08-0.20 for three LULC interfaces,three factorial tables + optional WorldPop cell table,threshold_sensitivity_reproduced.csv,canonical

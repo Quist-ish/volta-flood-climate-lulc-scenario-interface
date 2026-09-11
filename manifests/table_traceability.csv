@@ -1,0 +1,7 @@
+item,data,script
+Historical validation table,OOF predictions,01_reproduce_historical_validation.py
+Factorial headline table,RAW factorial,02_reproduce_factorial_headlines.py
+Scenario-interface table,three factorial implementations,03_reproduce_lulc_interface.py
+Applicability table,historical + future features,04_reproduce_applicability_domain.py
+Core-7 dependence table,RAW factorial,05_reproduce_core7_dependence.py
+GFD support table,V10.1C exports + OOF,06_reproduce_observation_support.py

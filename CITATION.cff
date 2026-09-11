@@ -1,0 +1,11 @@
+cff-version: 1.2.0
+message: "If you use this software or reproducibility archive, please cite the Zenodo release and the associated article."
+title: "Volta Basin Objective 3: climate–land-use flood-occurrence reproducibility archive"
+type: software
+authors:
+  - family-names: Quist
+    given-names: Ishmeal
+version: 1.0.0
+date-released: 2026-09-09
+repository-code: "https://github.com/Quist-ish/volta-flood-climate-lulc-scenario-interface"
+doi: "DOI_PENDING"

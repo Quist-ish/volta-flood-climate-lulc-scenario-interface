@@ -1,0 +1,9 @@
+claim,primary_data,reproduction_script,locked_reference
+Historical grouped discrimination,PHASE5D_OUTER_OOF_PREDICTIONS.csv.gz,01_reproduce_historical_validation.py,CORRECTED_OUTER_FOLD_METRICS_WITH_95CI.csv
+Primary harmonized climate share 69.2–90.1%,RAW_FACTORIAL_PREDICTIONS.csv.gz,02_reproduce_factorial_headlines.py,HEADLINE_FACTORIAL_RESULTS.csv
+Direct-Hou climate share 30.2–62.5%,DIRECT_HOU_FACTORIAL_PREDICTIONS.csv.gz,03_reproduce_lulc_interface.py,ADOPTED_VS_RECONSTRUCTED_VS_DIRECT_HOU.csv
+LULC representation changes driver ranking/sign,RAW + reconstructed + Direct-Hou factorials,03_reproduce_lulc_interface.py,ADOPTED_VS_RECONSTRUCTED_VS_DIRECT_HOU.csv
+Future applicability-domain shift,Historical feature table + RAW factorial,04_reproduce_applicability_domain.py,FUTURE_APPLICABILITY_DOMAIN.csv
+Core-7 dependence sensitivity,RAW factorial,05_reproduce_core7_dependence.py,CORE7_DEPENDENCE_SUMMARY.csv
+GFD observation-support sensitivity,OOF + V10.1C support exports,06_reproduce_observation_support.py,V10_1C_FOLD_LEVEL_OBSERVATION_SUPPORT_METRICS.csv
+Paired SSP predictor interpretation,Frozen model + RAW factorial,07_reproduce_paired_shap.py,V10.3B/V10.4 SHAP outputs collected by local builder

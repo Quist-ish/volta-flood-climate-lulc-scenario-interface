@@ -1,0 +1,41 @@
+file,release_path,bytes,role,status
+ALL_CLIMATOLOGIES.csv.gz,data/analysis_ready/ALL_CLIMATOLOGIES.csv.gz,4742310,Corrected climate-index climatologies used in V7 tail sensitivity,included
+CAP500_FACTORIAL_PREDICTIONS.csv.gz,data/analysis_ready/CAP500_FACTORIAL_PREDICTIONS.csv.gz,16221193,V7 sensitivity predictions with daily precipitation capped at 500 mm/day,included
+DIRECT_HOU_FACTORIAL_PREDICTIONS.csv.gz,data/analysis_ready/DIRECT_HOU_FACTORIAL_PREDICTIONS.csv.gz,15781102,,included
+EXCLUDE500_FACTORIAL_PREDICTIONS.csv.gz,data/analysis_ready/EXCLUDE500_FACTORIAL_PREDICTIONS.csv.gz,16220621,V7 sensitivity predictions excluding daily precipitation >=500 mm/day,included
+PHASE5D_HISTORICAL_FEATURE_TABLE.csv.gz,data/analysis_ready/PHASE5D_HISTORICAL_FEATURE_TABLE.csv.gz,481609,,included
+PHASE5D_OUTER_OOF_PREDICTIONS.csv.gz,data/analysis_ready/PHASE5D_OUTER_OOF_PREDICTIONS.csv.gz,59717,,included
+RAW_FACTORIAL_PREDICTIONS.csv.gz,data/analysis_ready/RAW_FACTORIAL_PREDICTIONS.csv.gz,16221315,,included
+RAW_HOU_DELTA_RECONSTRUCTION.csv,data/analysis_ready/RAW_HOU_DELTA_RECONSTRUCTION.csv,1224940,,included
+RAW_HOU_RECONSTRUCTED_FACTORIAL.csv.gz,data/analysis_ready/RAW_HOU_RECONSTRUCTED_FACTORIAL.csv.gz,16364445,,included
+PHASE5E_FACTORIAL_FEATURE_TABLE_SUPERSEDED_DO_NOT_USE_FOR_FINAL_SHAP.csv.gz,data/audit_only/PHASE5E_FACTORIAL_FEATURE_TABLE_SUPERSEDED_DO_NOT_USE_FOR_FINAL_SHAP.csv.gz,10784372,,included
+V10_1C_FOLD_LEVEL_OBSERVATION_SUPPORT_METRICS.csv,data/observation_support/V10_1C_FOLD_LEVEL_OBSERVATION_SUPPORT_METRICS.csv,45296,,included
+V10_1C_OUTER_FOLD_BOOTSTRAP_CI.csv,data/observation_support/V10_1C_OUTER_FOLD_BOOTSTRAP_CI.csv,38122,,included
+V10_1_VOLTA_622_CELL_CENTRES.csv,data/observation_support/V10_1_VOLTA_622_CELL_CENTRES.csv,13920,,included
+ADOPTED_VS_RECONSTRUCTED_VS_DIRECT_HOU.csv,data/reference_outputs/ADOPTED_VS_RECONSTRUCTED_VS_DIRECT_HOU.csv,3733,,included
+ADOPTED_VS_RECONSTRUCTED_VS_DIRECT_HOU_2.csv,data/reference_outputs/ADOPTED_VS_RECONSTRUCTED_VS_DIRECT_HOU_2.csv,3733,,included
+BEST_OUTER_OOF_CSI_THRESHOLDS.csv,data/reference_outputs/BEST_OUTER_OOF_CSI_THRESHOLDS.csv,79,,included
+C0L0_BASELINE_INVARIANCE.csv,data/reference_outputs/C0L0_BASELINE_INVARIANCE.csv,87,,included
+CLIMATE_TRANSFER_QC.csv,data/reference_outputs/CLIMATE_TRANSFER_QC.csv,1022,,included
+CORE7_DEPENDENCE_SUMMARY.csv,data/reference_outputs/CORE7_DEPENDENCE_SUMMARY.csv,395,,included
+CORRECTED_HISTORICAL_R10_R20.csv,data/reference_outputs/CORRECTED_HISTORICAL_R10_R20.csv,830,,included
+CORRECTED_OUTER_FOLD_METRICS_WITH_95CI.csv,data/reference_outputs/CORRECTED_OUTER_FOLD_METRICS_WITH_95CI.csv,3745,,included
+CORRECTED_RELEASE_GATES.csv,data/reference_outputs/CORRECTED_RELEASE_GATES.csv,512,,included
+DIRECT_HOU_ROBUSTNESS_SUMMARY.csv,data/reference_outputs/DIRECT_HOU_ROBUSTNESS_SUMMARY.csv,393,,included
+DIRECT_HOU_THRESHOLD_0p14.csv,data/reference_outputs/DIRECT_HOU_THRESHOLD_0p14.csv,1041,,included
+DIRECT_HOU_THRESHOLD_SENSITIVITY.csv,data/reference_outputs/DIRECT_HOU_THRESHOLD_SENSITIVITY.csv,11808,,included
+DIRECT_HOU_THRESHOLD_SIGN_ROBUSTNESS.csv,data/reference_outputs/DIRECT_HOU_THRESHOLD_SIGN_ROBUSTNESS.csv,484,,included
+FUTURE_APPLICABILITY_DOMAIN.csv,data/reference_outputs/FUTURE_APPLICABILITY_DOMAIN.csv,5010,,included
+HEADLINE_FACTORIAL_RESULTS.csv,data/reference_outputs/HEADLINE_FACTORIAL_RESULTS.csv,5330,,included
+LEAVE_ONE_MODEL_OUT.csv,data/reference_outputs/LEAVE_ONE_MODEL_OUT.csv,12100,,included
+LEAVE_ONE_MODEL_OUT_SUMMARY.csv,data/reference_outputs/LEAVE_ONE_MODEL_OUT_SUMMARY.csv,550,,included
+MODEL_FACTORIAL_ROBUSTNESS.csv,data/reference_outputs/MODEL_FACTORIAL_ROBUSTNESS.csv,37472,,included
+PRIMARY_THRESHOLD_0p14.csv,data/reference_outputs/PRIMARY_THRESHOLD_0p14.csv,3479,,included
+RECONSTRUCTED_THRESHOLD_SENSITIVITY.csv,data/reference_outputs/RECONSTRUCTED_THRESHOLD_SENSITIVITY.csv,13135,,included
+THRESHOLD_SENSITIVITY.csv,data/reference_outputs/THRESHOLD_SENSITIVITY.csv,42679,,included
+V9_2_COMPLETE_FINAL_HEADLINE_LOCK_REPORT.txt,data/reference_outputs/V9_2_COMPLETE_FINAL_HEADLINE_LOCK_REPORT.txt,32016,,included
+V9_2_MACHINE_SUMMARY.json,data/reference_outputs/V9_2_MACHINE_SUMMARY.json,896,,included
+V9_3_FINAL_DECISION_TABLE.csv,data/reference_outputs/V9_3_FINAL_DECISION_TABLE.csv,713,,included
+V9_3_FINAL_DECISION_TABLE_2.csv,data/reference_outputs/V9_3_FINAL_DECISION_TABLE_2.csv,713,,included
+V9_3_FINAL_FORENSIC_AUDIT_REPORT.txt,data/reference_outputs/V9_3_FINAL_FORENSIC_AUDIT_REPORT.txt,28425,,included
+V9_3_MACHINE_SUMMARY.json,data/reference_outputs/V9_3_MACHINE_SUMMARY.json,1152,,included

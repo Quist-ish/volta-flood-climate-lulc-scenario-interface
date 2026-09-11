@@ -1,0 +1,15 @@
+# Large/raw provider data should live on Zenodo or be re-downloaded
+raw_external/
+*.tif
+*.tiff
+*.nc
+*.hdf
+*.h5
+*.rar
+*.7z
+*.joblib
+cache/
+__pycache__/
+.ipynb_checkpoints/
+.DS_Store
+Thumbs.db
