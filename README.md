@@ -1,54 +1,230 @@
-# Volta Basin reproducibility archive
+# Volta Basin Climate–LULC Scenario-Interface Flood Analysis
 
-**Study:** Scenario-interface uncertainty reshapes climate versus land-use contributions to future flood occurrence across the transboundary Volta Basin
+## Reproducibility materials
 
-**Repository:** https://github.com/Quist-ish/volta-flood-climate-lulc-scenario-interface (create this repository under your GitHub account and push this package's contents as its initial commit)
+This repository contains the code, documentation, manifests, analysis-ready data, and reference outputs supporting the study:
 
-This repository/archive is the reproducibility package for the final Objective 3 analysis. It is designed for a **GitHub code repository linked to a Zenodo DOI**. The package separates (i) executable code and small analysis-ready data that are suitable for GitHub, from (ii) bulky audit archives and third-party source products that are more appropriate for Zenodo or should be re-downloaded from their authoritative providers.
+**Scenario-interface uncertainty reshapes climate versus land-use contributions to future flood occurrence across the transboundary Volta Basin**
 
-## What this release reproduces
+The repository is intended to support transparent inspection and reproduction of the analyses reported in the manuscript and Supplementary Information. A versioned Zenodo archive will provide the permanent citable record and the larger reproducibility artifacts that are unsuitable for routine GitHub storage.
 
-The final analysis uses a frozen Random Forest classifier and a four-state counterfactual design (`C0L0`, `C1L0`, `C0L1`, `C1L1`) on the six-country transboundary Volta analytical domain. The final projection ensemble contains seven CMIP6 models: ACCESS-CM2, ACCESS-ESM1-5, CanESM5, INM-CM5-0, IPSL-CM6A-LR, MIROC6 and TaiESM1. Scenarios are SSP2-4.5 and SSP5-8.5; projection windows are 2021–2040, 2041–2060 and 2081–2100.
+## Study overview
 
-The deposited analysis-ready files reproduce:
+The analysis evaluates how the representation of future climate and land-use/land-cover (LULC) scenarios affects modeled future flood-occurrence probability across the six-country transboundary Volta Basin.
 
-1. grouped historical out-of-fold evaluation;
-2. corrected future climate predictors, including the R10mm/R20mm count-unit correction;
-3. source-native / CAP500 / EXCLUDE500 precipitation-tail sensitivity (audit archive); 
-4. model-first factorial climate, LULC and interaction components;
-5. threshold sensitivity (`p=0.08`–`0.20`) and the archived `p=0.14` operating point;
+A frozen Random Forest classifier is evaluated within a four-state climate × LULC counterfactual framework:
+
+- `C0L0` — historical climate + historical LULC
+- `C1L0` — future climate + historical LULC
+- `C0L1` — historical climate + future LULC
+- `C1L1` — future climate + future LULC
+
+The four states are evaluated separately within each retained climate model before ensemble summarization.
+
+The final Core-7 CMIP6 ensemble comprises:
+
+- ACCESS-CM2
+- ACCESS-ESM1-5
+- CanESM5
+- INM-CM5-0
+- IPSL-CM6A-LR
+- MIROC6
+- TaiESM1
+
+Future analyses cover:
+
+- **SSP2-4.5**
+- **SSP5-8.5**
+
+for three projection periods:
+
+- **2021–2040**
+- **2041–2060**
+- **2081–2100**
+
+## Analyses supported by this archive
+
+The deposited materials support reproduction or verification of the following components of the study:
+
+1. grouped historical out-of-fold model evaluation;
+2. corrected historical and future precipitation predictors, including the R10mm and R20mm count-index correction;
+3. RAW, `CAP500`, and `EXCLUDE500` precipitation-tail sensitivity analyses;
+4. model-level climate, LULC, interaction, and combined factorial effects;
+5. threshold sensitivity across `p = 0.08–0.20`, including the archived `p = 0.14` projection slice;
 6. future applicability-domain diagnostics;
 7. MODIS–Hou harmonized versus Direct-Hou LULC representation sensitivity;
 8. GFD observation-support sensitivity;
-9. paired Tree SHAP scenario-response diagnostics when the frozen model is present;
-10. Core-7 dependence-aware weighting.
+9. paired Tree SHAP scenario-response diagnostics when the frozen fitted model is available; and
+10. Core-7 climate-model dependence weighting and associated sensitivity analyses.
 
-## Critical authority rule
+## Authoritative analytical inputs
 
-`data/analysis_ready/RAW_FACTORIAL_PREDICTIONS.csv.gz` is the authoritative corrected factorial input for the final future analysis. The older Phase5E table is retained only in `data/audit_only/` because it predates the corrected future R10mm/R20mm states and **must not be used for final SHAP interpretation**.
+The authoritative corrected factorial input for the final future analysis is:
 
-## Quick start
+`data/analysis_ready/RAW_FACTORIAL_PREDICTIONS.csv.gz`
+
+This file contains the corrected future predictor states used in the final factorial analysis, including the corrected R10mm and R20mm count indices.
+
+The earlier Phase5E factorial feature table is retained only for provenance and audit purposes under:
+
+`data/audit_only/`
+
+It predates the corrected future R10mm/R20mm states and **must not be used for the final factorial interpretation or Tree SHAP analysis**.
+
+Compressed analysis-ready files are used in the GitHub repository where appropriate to reduce unnecessary duplication and repository size.
+
+## Repository structure
+
+```text
+.
+├── code/
+│   ├── reproduce/
+│   └── exact/
+├── data/
+│   ├── analysis_ready/
+│   ├── audit_only/
+│   ├── boundary/
+│   ├── exposure/
+│   ├── observation_support/
+│   ├── reference_outputs/
+│   └── supplementary_tables/
+├── docs/
+├── manifests/
+├── reproduced_outputs/
+├── CITATION.cff
+├── DATA_AVAILABILITY.md
+├── DATA_LICENSE_NOTICE.md
+├── PROVENANCE_LIMITATIONS.md
+├── RELEASE_STATUS.md
+├── RUN_ORDER.md
+├── environment.yml
+└── requirements.txt
+
+The corresponding Zenodo archival release will contain the frozen fitted model and other larger artifacts that are unsuitable for routine GitHub storage.
+
+## Reproduction
+
+The reproducibility code will be available in the `code/` directory of this repository. Once the complete code release is deposited, the recommended environment and execution workflow will be:
+
+### Environment
 
 ```bash
 conda env create -f environment.yml
 conda activate volta-objective3-repro
+Run the reproducibility workflow
 python code/reproduce/reproduce_all.py
-```
 
-The reproduction scripts use only the analysis-ready tables and the frozen model already included in this release, and do not require redownloading any third-party data. See `RUN_ORDER.md`, `DATA_AVAILABILITY.md`, `PROVENANCE_LIMITATIONS.md`, the CSV manifests in `manifests/`, and the exact published-table source files in `data/supplementary_tables/` (predictor correlation matrix and interface applicability-domain comparison). The frozen model (`models/`), the exact GRDC boundary shapefile (`data/boundary/`), the seven raw GFD observation-support exports (`data/observation_support/`), and the WorldPop cell population table (`data/exposure/`) are now included and independently verified — see `RELEASE_STATUS.md` for the verification details and one flagged discrepancy requiring author attention.
+See RUN_ORDER.md for the recommended execution sequence and RELEASE_STATUS.md for the verification status of the released materials.
 
-## Zenodo/GitHub release strategy
+Some analyses, particularly Tree SHAP reproduction, require the frozen fitted model distributed with the complete Zenodo archival release.
 
-Use the GitHub ZIP generated with this package for code, manifests and compact analysis-ready data. Upload the larger Zenodo audit ZIP separately and cite its DOI from the GitHub README. A GitHub release can then be archived through Zenodo's GitHub integration.
+Key documentation
 
-## Reproducibility boundaries
+The repository includes the following supporting documentation:
 
-- The complete intermediate GIS edit history that transformed the upstream GRDC Major River Basins source package into the local `GRDC_VOLTA_POLITICAL_TRANSBOUNDARY_BASIN` derivative was not recoverable. The exact locked geometry is therefore the reproducible analysis geometry.
-- `p=0.14` is an archived analytical operating point, not a demonstrated calibrated/CV-selected threshold.
-- Independent event-matched Sentinel-1 validation, dynamic reservoir operations and dynamic future population were **not completed** and are not represented as completed analyses.
-- WorldPop is fixed-2020 exposure; it is not a future demographic projection.
-- OpenStreetMap counts were removed from headline inference because basin-wide completeness was not established.
+RUN_ORDER.md — recommended analysis execution sequence
+DATA_AVAILABILITY.md — data access and redistribution information
+DATA_LICENSE_NOTICE.md — licensing and redistribution notes
+PROVENANCE_LIMITATIONS.md — provenance boundaries and methodological limitations
+RELEASE_STATUS.md — release verification information
+CITATION.cff — machine-readable citation metadata
+docs/DOWNLOAD_EXTERNAL_SOURCES.md — authoritative third-party source locations
+docs/CODE_PROVENANCE_AND_REQUIRED_SCRIPTS.md — code provenance and script requirements
 
-## Citation
+The manifests/ directory provides file inventories, traceability information, data dictionaries, and checksums linking analytical inputs and outputs to the reported study.
 
-After the Zenodo record is published, replace `DOI_PENDING` in this README and `CITATION.cff` with the issued DOI. Do not invent a DOI before Zenodo issues or reserves one.
+Integrity verification
+
+Release integrity can be checked using the supplied SHA-256 records:
+
+manifests/checksums.sha256
+
+and
+
+manifests/checksum_manifest.csv
+
+These records are provided to verify that released analytical inputs and supporting artifacts correspond to the frozen reproducibility package.
+
+Reproducibility and interpretation boundaries
+Analytical domain
+
+The exact project-local Volta Basin geometry distributed with the reproducibility materials is the analytical boundary used in the study.
+
+The complete intermediate GIS editing history connecting the upstream GRDC Major River Basins source package to the locked project derivative was not preserved. The distributed locked geometry therefore defines the reproducible analytical domain.
+
+Historical validation
+
+Historical validation consists of grouped event-year evaluation and GFD observation-support sensitivity.
+
+No independent event-matched flood-sensor or hydrometric dataset formed part of the validation design. The resulting model probabilities are therefore interpreted comparatively rather than as calibrated absolute event probabilities.
+
+Threshold interpretation
+
+The archived p = 0.14 value is retained as a secondary projection-continuity slice within the broader p = 0.08–0.20 threshold sensitivity analysis.
+
+It is not interpreted as a calibrated, cross-validation-selected, or universally optimal deployment threshold.
+
+Reservoir representation
+
+The model does not dynamically simulate future reservoir operating rules. Historical regulation may be represented indirectly through fitted historical spatial associations, but future changes in Lake Volta–Akosombo reservoir operations are outside the modeled system.
+
+Population exposure
+
+Population exposure uses WorldPop 2020 held fixed through time.
+
+These results therefore represent fixed-current population exposure rather than future demographic projections or dynamic future flood risk.
+
+Infrastructure
+
+OpenStreetMap infrastructure counts are not used in headline inference because basin-wide completeness was not established.
+
+Future LULC representation
+
+Future LULC uncertainty is evaluated using the Hou et al. scenario product through both:
+
+a primary MODIS–Hou harmonized interface; and
+a Direct-Hou structural sensitivity.
+
+The Direct-Hou analysis is a scenario-interface sensitivity test rather than an alternative estimate of causal truth.
+
+Data availability and third-party sources
+
+This repository redistributes study-generated and analysis-ready products where appropriate.
+
+Large or externally licensed third-party source datasets are not necessarily redistributed. Where source products are omitted, the repository provides provider information, provenance records, manifests, and processing documentation needed to identify their role in the analysis.
+
+See:
+
+DATA_AVAILABILITY.md
+
+and
+
+docs/DOWNLOAD_EXTERNAL_SOURCES.md
+
+for details.
+
+GitHub and Zenodo archive strategy
+
+GitHub provides the version-controlled repository for code, documentation, manifests, compact analysis-ready data, and reproducibility outputs.
+
+Zenodo will provide the permanent archival release and DOI. The Zenodo record will contain the complete frozen reproducibility package, including larger artifacts that are not appropriate for routine GitHub storage.
+
+For reproduction of the published study, users should use the versioned GitHub release and corresponding Zenodo archive associated with the manuscript rather than later development versions of the repository.
+
+Citation
+
+A permanent citation will be provided through the corresponding Zenodo release.
+
+Zenodo DOI: DOI_PENDING
+
+Until the Zenodo DOI is issued, the repository may be referenced by its versioned GitHub release.
+
+Once Zenodo assigns the DOI, DOI_PENDING will be replaced in this README and in CITATION.cff.
+
+Recommended citation
+
+Authors. (Year). Reproducibility materials for “Scenario-interface uncertainty reshapes climate versus land-use contributions to future flood occurrence across the transboundary Volta Basin” (Version 1.0) [Data set and software]. Zenodo. DOI_PENDING
+
+License
+
+See LICENSE and DATA_LICENSE_NOTICE.md for the licensing conditions applicable to the repository code, study-generated outputs, and third-party-derived materials.
