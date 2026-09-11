@@ -99,111 +99,112 @@ Compressed analysis-ready files are used in the GitHub repository where appropri
 ├── RUN_ORDER.md
 ├── environment.yml
 └── requirements.txt
+```
 
 The corresponding Zenodo archival release will contain the frozen fitted model and other larger artifacts that are unsuitable for routine GitHub storage.
 
 ## Reproduction
 
-The reproducibility code will be available in the `code/` directory of this repository. Once the complete code release is deposited, the recommended environment and execution workflow will be:
+The reproducibility code is provided in the `code/` directory of this repository.
 
 ### Environment
+
+Using Conda:
 
 ```bash
 conda env create -f environment.yml
 conda activate volta-objective3-repro
-Run the reproducibility workflow
-python code/reproduce/reproduce_all.py
+```
 
-See RUN_ORDER.md for the recommended execution sequence and RELEASE_STATUS.md for the verification status of the released materials.
+### Run the reproducibility workflow
+
+```bash
+python code/reproduce/reproduce_all.py
+```
+
+See `RUN_ORDER.md` for the recommended execution sequence and `RELEASE_STATUS.md` for the verification status of the released materials.
 
 Some analyses, particularly Tree SHAP reproduction, require the frozen fitted model distributed with the complete Zenodo archival release.
 
-Key documentation
+## Key documentation
 
 The repository includes the following supporting documentation:
 
-RUN_ORDER.md — recommended analysis execution sequence
-DATA_AVAILABILITY.md — data access and redistribution information
-DATA_LICENSE_NOTICE.md — licensing and redistribution notes
-PROVENANCE_LIMITATIONS.md — provenance boundaries and methodological limitations
-RELEASE_STATUS.md — release verification information
-CITATION.cff — machine-readable citation metadata
-docs/DOWNLOAD_EXTERNAL_SOURCES.md — authoritative third-party source locations
-docs/CODE_PROVENANCE_AND_REQUIRED_SCRIPTS.md — code provenance and script requirements
+- `RUN_ORDER.md` — recommended analysis execution sequence
+- `DATA_AVAILABILITY.md` — data access and redistribution information
+- `DATA_LICENSE_NOTICE.md` — licensing and redistribution notes
+- `PROVENANCE_LIMITATIONS.md` — provenance boundaries and methodological limitations
+- `RELEASE_STATUS.md` — release verification information
+- `CITATION.cff` — machine-readable citation metadata
+- `docs/DOWNLOAD_EXTERNAL_SOURCES.md` — authoritative third-party source locations
+- `docs/CODE_PROVENANCE_AND_REQUIRED_SCRIPTS.md` — code provenance and script requirements
 
-The manifests/ directory provides file inventories, traceability information, data dictionaries, and checksums linking analytical inputs and outputs to the reported study.
+The `manifests/` directory provides file inventories, traceability information, data dictionaries, and checksums linking analytical inputs and outputs to the reported study.
 
-Integrity verification
+## Integrity verification
 
 Release integrity can be checked using the supplied SHA-256 records:
 
-manifests/checksums.sha256
+`manifests/checksums.sha256`
 
 and
 
-manifests/checksum_manifest.csv
+`manifests/checksum_manifest.csv`
 
 These records are provided to verify that released analytical inputs and supporting artifacts correspond to the frozen reproducibility package.
 
-Reproducibility and interpretation boundaries
-Analytical domain
+## Reproducibility and interpretation boundaries
+
+### Analytical domain
 
 The exact project-local Volta Basin geometry distributed with the reproducibility materials is the analytical boundary used in the study.
 
 The complete intermediate GIS editing history connecting the upstream GRDC Major River Basins source package to the locked project derivative was not preserved. The distributed locked geometry therefore defines the reproducible analytical domain.
 
-Historical validation
+### Historical validation
 
 Historical validation consists of grouped event-year evaluation and GFD observation-support sensitivity.
 
 No independent event-matched flood-sensor or hydrometric dataset formed part of the validation design. The resulting model probabilities are therefore interpreted comparatively rather than as calibrated absolute event probabilities.
 
-Threshold interpretation
+### Threshold interpretation
 
-The archived p = 0.14 value is retained as a secondary projection-continuity slice within the broader p = 0.08–0.20 threshold sensitivity analysis.
+The archived `p = 0.14` value is retained as a secondary projection-continuity slice within the broader `p = 0.08–0.20` threshold sensitivity analysis.
 
 It is not interpreted as a calibrated, cross-validation-selected, or universally optimal deployment threshold.
 
-Reservoir representation
+### Reservoir representation
 
 The model does not dynamically simulate future reservoir operating rules. Historical regulation may be represented indirectly through fitted historical spatial associations, but future changes in Lake Volta–Akosombo reservoir operations are outside the modeled system.
 
-Population exposure
+### Population exposure
 
 Population exposure uses WorldPop 2020 held fixed through time.
 
-These results therefore represent fixed-current population exposure rather than future demographic projections or dynamic future flood risk.
+These results therefore represent **fixed-current population exposure** rather than future demographic projections or dynamic future flood risk.
 
-Infrastructure
+### Infrastructure
 
 OpenStreetMap infrastructure counts are not used in headline inference because basin-wide completeness was not established.
 
-Future LULC representation
+### Future LULC representation
 
 Future LULC uncertainty is evaluated using the Hou et al. scenario product through both:
 
-a primary MODIS–Hou harmonized interface; and
-a Direct-Hou structural sensitivity.
+- a primary MODIS–Hou harmonized interface; and
+- a Direct-Hou structural sensitivity.
 
 The Direct-Hou analysis is a scenario-interface sensitivity test rather than an alternative estimate of causal truth.
 
-Data availability and third-party sources
+## Data availability and third-party sources
 
 This repository redistributes study-generated and analysis-ready products where appropriate.
 
 Large or externally licensed third-party source datasets are not necessarily redistributed. Where source products are omitted, the repository provides provider information, provenance records, manifests, and processing documentation needed to identify their role in the analysis.
 
-See:
+See `DATA_AVAILABILITY.md` and `docs/DOWNLOAD_EXTERNAL_SOURCES.md` for details.
 
-DATA_AVAILABILITY.md
-
-and
-
-docs/DOWNLOAD_EXTERNAL_SOURCES.md
-
-for details.
-
-GitHub and Zenodo archive strategy
+## GitHub and Zenodo archive strategy
 
 GitHub provides the version-controlled repository for code, documentation, manifests, compact analysis-ready data, and reproducibility outputs.
 
@@ -211,20 +212,22 @@ Zenodo will provide the permanent archival release and DOI. The Zenodo record wi
 
 For reproduction of the published study, users should use the versioned GitHub release and corresponding Zenodo archive associated with the manuscript rather than later development versions of the repository.
 
-Citation
+## Citation
 
 A permanent citation will be provided through the corresponding Zenodo release.
 
-Zenodo DOI: DOI_PENDING
+**Zenodo DOI:** `DOI_PENDING`
 
-Until the Zenodo DOI is issued, the repository may be referenced by its versioned GitHub release.
+Until the Zenodo DOI is issued, the repository may be referenced by its versioned GitHub release:
 
-Once Zenodo assigns the DOI, DOI_PENDING will be replaced in this README and in CITATION.cff.
+https://github.com/Quist-ish/volta-flood-climate-lulc-scenario-interface
 
-Recommended citation
+Once Zenodo assigns the DOI, `DOI_PENDING` will be replaced in this README and in `CITATION.cff`.
 
-Authors. (Year). Reproducibility materials for “Scenario-interface uncertainty reshapes climate versus land-use contributions to future flood occurrence across the transboundary Volta Basin” (Version 1.0) [Data set and software]. Zenodo. DOI_PENDING
+### Recommended citation
 
-License
+> Authors. (Year). *Reproducibility materials for “Scenario-interface uncertainty reshapes climate versus land-use contributions to future flood occurrence across the transboundary Volta Basin”* (Version 1.0) [Data set and software]. Zenodo. DOI_PENDING
 
-See LICENSE and DATA_LICENSE_NOTICE.md for the licensing conditions applicable to the repository code, study-generated outputs, and third-party-derived materials.
+## License
+
+See `LICENSE` and `DATA_LICENSE_NOTICE.md` for the licensing conditions applicable to the repository code, study-generated outputs, and third-party-derived materials.
