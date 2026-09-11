@@ -1,4 +1,4 @@
-# Volta Basin Objective 3 reproducibility archive
+# Volta Basin reproducibility archive
 
 **Study:** Scenario-interface uncertainty reshapes climate versus land-use contributions to future flood occurrence across the transboundary Volta Basin
 
