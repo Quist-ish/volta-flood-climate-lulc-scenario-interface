@@ -1,7 +1,11 @@
 {
-  "title": "Volta Basin Objective 3: climate\u2013land-use flood-occurrence reproducibility archive",
+  "title": "Reproducibility materials for scenario-interface uncertainty in future flood occurrence across the transboundary Volta Basin",
+  "version": "1.0.0",
   "upload_type": "software",
-  "description": "Code, analysis-ready data, manifests and audit artifacts supporting the study of scenario-interface uncertainty in climate versus land-use contributions to future flood occurrence across the transboundary Volta Basin.",
+  "access_right": "open",
+  "license": "mit",
+  "language": "eng",
+  "description": "Code, analysis-ready data, manifests, model records and audit artifacts supporting the climate-land-use counterfactual analysis of future flood occurrence across the transboundary Volta Basin.",
   "creators": [
     {
       "name": "Quist, Ishmeal"
@@ -13,11 +17,9 @@
     "CMIP6",
     "land-use change",
     "machine learning",
-    "Random Forest",
+    "random forest",
     "factorial decomposition",
-    "SHAP",
+    "scenario-interface uncertainty",
     "reproducibility"
-  ],
-  "related_identifiers": [],
-  "notes": "A DOI has not yet been issued. The repository separates original code from third-party datasets with provider-specific licences."
+  ]
 }
