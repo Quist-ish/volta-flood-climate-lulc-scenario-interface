@@ -212,17 +212,13 @@ Zenodo will provide the permanent archival release and DOI. The Zenodo record wi
 
 For reproduction of the published study, users should use the versioned GitHub release and corresponding Zenodo archive associated with the manuscript rather than later development versions of the repository.
 
-## Citation
-
-QUIST, I., Bi, S., Yeboah, E., Sarfo, I., Mensah, A. O. K. N., Evi, M., Oduro, C., & Benjamin Nana yaw Quist. (2026). Reproducibility materials for scenario-interface uncertainty in future flood occurrence across the transboundary Volta Basin (Version 1.0.0) [Computer software]. Zenodo. https://doi.org/10.5281/zenodo.22713203.
-
 **Zenodo DOI:** 
 
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.22713203.svg)](https://doi.org/10.5281/zenodo.22713203).
 
 ### Recommended citation
 
-> Authors. (Year). *Reproducibility materials for “Scenario-interface uncertainty reshapes climate versus land-use contributions to future flood occurrence across the transboundary Volta Basin”* (Version 1.0) [Data set and software]. Zenodo. DOI_PENDING
+QUIST, I., Bi, S., Yeboah, E., Sarfo, I., Mensah, A. O. K. N., Evi, M., Oduro, C., & Benjamin Nana yaw Quist. (2026). Reproducibility materials for scenario-interface uncertainty in future flood occurrence across the transboundary Volta Basin (Version 1.0.0) [Computer software]. Zenodo. https://doi.org/10.5281/zenodo.22713203.
 
 ## License
 
