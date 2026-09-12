@@ -214,15 +214,11 @@ For reproduction of the published study, users should use the versioned GitHub r
 
 ## Citation
 
-A permanent citation will be provided through the corresponding Zenodo release.
+QUIST, I., Bi, S., Yeboah, E., Sarfo, I., Mensah, A. O. K. N., Evi, M., Oduro, C., & Benjamin Nana yaw Quist. (2026). Reproducibility materials for scenario-interface uncertainty in future flood occurrence across the transboundary Volta Basin (Version 1.0.0) [Computer software]. Zenodo. https://doi.org/10.5281/zenodo.22713203.
 
-**Zenodo DOI:** `DOI_PENDING`
+**Zenodo DOI:** 
 
-Until the Zenodo DOI is issued, the repository may be referenced by its versioned GitHub release:
-
-https://github.com/Quist-ish/volta-flood-climate-lulc-scenario-interface
-
-Once Zenodo assigns the DOI, `DOI_PENDING` will be replaced in this README and in `CITATION.cff`.
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.22713203.svg)](https://doi.org/10.5281/zenodo.22713203).
 
 ### Recommended citation
 
