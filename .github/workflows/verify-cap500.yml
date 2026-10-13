@@ -1,0 +1,51 @@
+name: Verify direct-period CAP500 reproducibility
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  cap500-reproducibility:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Install smoke-test dependencies
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install "numpy>=2.2,<3" "pandas>=2.3,<3"
+      - name: Check archived CAP500 structure
+        run: python code/00_verify_public_repository.py
+      - name: Recompute direct-period factorial contrasts
+        run: python code/01_reproduce_cap500_direct_periods.py
+      - name: Check output CSVs exist and contain expected direct-period summaries
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          import pandas as pd
+          folder = Path("generated_outputs")
+          model = pd.read_csv(folder / "CAP500_model_level_direct_periods.csv")
+          basin = pd.read_csv(folder / "CAP500_basin_headline_direct_periods.csv")
+          assert len(model) == 42, len(model)
+          assert len(basin) == 6, len(basin)
+          assert basin["climate_share_pct"].between(0,100).all()
+          print("PASS: 42 model×scenario×period summaries and 6 basin summaries.")
+          print("SCOPE: CAP500 direct-period archive; not RAW, Direct-Hou, or estimated 2061–2080.")
+          PY
+      - name: Save regenerated evidence
+        uses: actions/upload-artifact@v4
+        with:
+          name: cap500-direct-period-recomputed
+          path: |
+            generated_outputs/CAP500_model_level_direct_periods.csv
+            generated_outputs/CAP500_basin_headline_direct_periods.csv
