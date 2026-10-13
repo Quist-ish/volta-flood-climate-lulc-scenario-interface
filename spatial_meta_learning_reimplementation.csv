@@ -1,0 +1,4 @@
+target,n,prevalence,roc_auc,ci_lo,ci_hi,top5
+Active vs inactive cell,4952,0.7029483037156704,0.8965144571355699,0.8742488328948711,0.9198761131522427,log_upstream_area (0.059); d_shrub (0.057); base_shrub (0.029); elevation_m (0.019); HAND_m (0.014)
+Landscape- vs climate-dominated (active cells),3481,0.39988509049123816,0.7585579293287774,0.7165724358795836,0.8083447803278471,d_shrub (0.099); base_shrub (0.042); d_cropland (0.035); elevation_m (0.033); base_cropland (0.024)
+Positive vs negative combined response (|combined| >= 0.01),2918,0.6953392734749828,0.7273554827332143,0.6658632928216481,0.7916216624396722,elevation_m (0.069); R20mm_base (0.050); PRCPTOT_base (0.041); base_cropland (0.032); log_upstream_area (0.027)
