@@ -1,11 +1,18 @@
 cff-version: 1.2.0
-message: "If you use this software or reproducibility archive, please cite the Zenodo release and the associated article."
-title: "Volta Basin Objective 3: climate–land-use flood-occurrence reproducibility archive"
+message: "If you reuse these materials, cite the associated study and the public research archive where available."
+title: "Reproducibility materials for the Volta Basin climate–landscape flood-occurrence study"
 type: software
 authors:
   - family-names: Quist
     given-names: Ishmeal
-version: 1.0.0
-date-released: 2026-09-09
+    orcid: "https://orcid.org/0009-0009-0739-0359"
+version: 1.1.0
+date-released: 2026-10-13
 repository-code: "https://github.com/Quist-ish/volta-flood-climate-lulc-scenario-interface"
-doi: "DOI_PENDING"
+license: MIT
+keywords:
+  - Volta Basin
+  - flood occurrence
+  - CMIP6
+  - land-cover translation
+  - counterfactual decomposition

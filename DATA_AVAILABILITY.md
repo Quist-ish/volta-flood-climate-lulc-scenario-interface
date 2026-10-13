@@ -1,7 +1,9 @@
-# Data availability and redistribution
+# Data and code availability
 
-The repository contains compact analysis-ready/derived tables needed to reproduce the paper's final numerical conclusions. Very large third-party source datasets are not duplicated in the GitHub release. They must be obtained from the authoritative providers listed in `manifests/external_data_sources.csv`, using the exact product/version stated there and the original local inventory in `manifests/original_local_file_inventory.csv`.
+The repository provides archived CAP500 factorial predictions and a compact, executable check of direct-period factorial structure and closure. Recomputed outputs are generated under `generated_outputs/`. The locked reported results under `reference_outputs/current_reported/` are transcriptions for independent comparison, not source-level reconstructions.
 
-The Zenodo audit archive may contain the author's analysis archives and derived products. Third-party source products should only be redistributed when their provider licence permits it. In particular, preserve each provider's citation and licence requirements; do not apply the repository's code licence to third-party data.
+The **separate** compact v1.1.0 package provides more metadata, integration scripts, reference outputs and audit materials than this GitHub review branch. Neither should be interpreted as containing original artifacts not actually deposited.
 
-For the strictest source-to-result reproduction, run the Windows release builder on the original `D:\PROGRESS_PAPERS\3nd_Objective` tree. It creates a manifest and SHA-256 digest for every collected file and reports any expected script/data artifact it cannot find.
+Primary datasets (CHIRPS, NEX-GDDP-CMIP6, MODIS, GFD, Hou future LULC, DAHITI, UNOSAT and WorldPop) must be obtained according to provider access and redistribution conditions.
+
+The manuscript reports Zenodo DOI `10.5281/zenodo.22713203` and this version-controlled repository. The Zenodo record's accessibility/content has not been independently checked by the present repository-verification scripts. See `RELEASE_STATUS.md` and `PROVENANCE_LIMITATIONS.md`.

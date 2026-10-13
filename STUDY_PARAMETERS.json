@@ -1,0 +1,50 @@
+{
+  "study_title": "Future land-cover translation can reverse the modeled climate–landscape attribution of flood occurrence in the transboundary Volta Basin",
+  "analytical_domain_area_km2_rounded": 410992,
+  "grid_cells_intersecting_domain": 623,
+  "historical_model_cells": 622,
+  "historical_cell_years": 4354,
+  "historical_positive_labels": 520,
+  "future_common_support_cells": 619,
+  "predictor_count": 15,
+  "retained_climate_models": [
+    "IPSL-CM6A-LR",
+    "INM-CM5-0",
+    "CanESM5",
+    "ACCESS-ESM1-5",
+    "ACCESS-CM2",
+    "TaiESM1",
+    "MIROC6"
+  ],
+  "scenarios": [
+    "SSP2-4.5",
+    "SSP5-8.5"
+  ],
+  "future_periods": [
+    {
+      "period": "2021–2040",
+      "status": "direct"
+    },
+    {
+      "period": "2041–2060",
+      "status": "direct"
+    },
+    {
+      "period": "2061–2080",
+      "status": "estimated interpolation–emulation"
+    },
+    {
+      "period": "2081–2100",
+      "status": "direct"
+    }
+  ],
+  "four_states": {
+    "C0L0": "historical climate / LULC",
+    "C1L0": "future climate / historical LULC",
+    "C0L1": "historical climate / future LULC",
+    "C1L1": "future climate / LULC"
+  },
+  "archived_closure_max_abs_error": 1.1102230246251565e-16,
+  "manuscript_reported_zenodo_doi": "10.5281/zenodo.22713203",
+  "version": "1.1.0"
+}
