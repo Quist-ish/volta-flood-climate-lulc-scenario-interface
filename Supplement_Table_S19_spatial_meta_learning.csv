@@ -1,0 +1,4 @@
+Target,n,Prev.,ROC-AUC (95% CI),Five most important predictors (Δ ROC-AUC)
+Active vs. inactive cell,"4,952",0.703,0.900 (0.878–0.924),log upstream area (0.076); Δ shrub/savanna/grass (0.060); baseline shrub/savanna/grass (0.033); HAND (0.028); elevation (0.018)
+Landscape- vs. climate-dominated (active cells),"3,479",0.402,0.771 (0.732–0.817),Δ shrub/savanna/grass (0.096); baseline shrub/savanna/grass (0.043); elevation (0.042); Δ cropland (0.034); baseline cropland (0.031)
+Positive vs. negative combined response (|ΔCombined| ≥ 0.01),"2,917",0.695,0.725 (0.660–0.793),elevation (0.070); baseline R20mm (0.048); baseline PRCPTOT (0.033); baseline cropland (0.025); log upstream area (0.023)
