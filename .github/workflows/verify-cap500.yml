@@ -42,6 +42,8 @@ jobs:
           print("PASS: 42 model×scenario×period summaries and 6 basin summaries.")
           print("SCOPE: CAP500 direct-period archive; not RAW, Direct-Hou, or estimated 2061–2080.")
           PY
+      - name: Check additional reimplementation script syntax
+        run: python -m py_compile code/02_estimate_2061_harmonized.py code/03_spatial_meta_learning.py
       - name: Save regenerated evidence
         uses: actions/upload-artifact@v4
         with:
