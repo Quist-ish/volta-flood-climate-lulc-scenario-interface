@@ -48,3 +48,13 @@ The 2023 UNOSAT six-cell comparison is **descriptive local evidence only**, not 
 The associated manuscript cites Zenodo DOI **10.5281/zenodo.22713203**. This is **manuscript-reported but has not been independently resolved or its files verified**; do not claim that the permanent archive has been verified. The archive's existence and contents must be checked by the corresponding author.
 
 Third-party datasets retain their provider terms. New code in this repository is under MIT where expressly licensed.
+
+## Additional original-source recovery (13 October 2026)
+
+The authors supplied 49 original source files after the earlier compact-package audit. All 49 matched their inventory SHA-256 values and file sizes in an independent check. The new local review package v1.2.0 includes the original frozen model (SHA-256 f08389f3b416f7f9cdd03ac62c0e41f2fcd0aac496f472122157229abd65dcd6), historical and outer-OOF tables (4,354 records, 622 cells, 520 flood positives), original RAW predictions (103,992 rows), V7 primary results, archived V9.2 Direct-Hou headline summaries, GFD observation-support files, the five-component basin shapefile and WorldPop reference/backup files.
+
+The original RAW data reproduce six V7 primary factorial headline shares and component medians to numerical precision. The archived V9.2 comparison shows identical climate-only contrasts (maximum difference 0.0), a sign reversal of the SSP5-8.5 combined response in all three directly evaluated periods, and a 19.70–39.05 percentage-point change in climate share.
+
+This original-source archive is held separately for author/editor review and HAS NOT been uploaded to public GitHub because provider-redistribution and binary model security checks remain outstanding. No original analysis .py or .ipynb files were found in the 49 recovered files; the exact estimated 2061–2080 and S19 spatial code and the original Direct-Hou cellwise predictions remain unavailable. The manuscript-cited Zenodo DOI has not been independently verified.
+
+See ORIGINAL_SOURCE_RECOVERY_VERIFICATION_2026-10-13.md for an audit and release boundaries.
