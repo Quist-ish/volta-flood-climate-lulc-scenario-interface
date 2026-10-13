@@ -4,7 +4,7 @@
 
 This is a **journal-neutral** research repository. Its code and outputs may be examined by editors and reviewers of any journal. No manuscript Word file is deposited here.
 
-> **Review branch, not a completed release.** This branch aligns the metadata and a compact CAP500 verification workflow with the current four-period manuscript. The full journal-neutral v1.1.0 package includes additional scripts, locked reference tables, archived notebooks, and outputs that are **not all present on this branch**. Do not describe this branch alone as complete source-level reproduction.
+> **Verified compact workflow; incomplete full-source archive.** The published `main` branch has passed a GitHub Actions smoke test of archived CAP500 factorial predictions (run 38378290970). The separately assembled journal-neutral v1.1.0 ZIP contains additional scripts and outputs that are **not all deposited here**. Neither set should be described as complete source-level reconstruction. See [independent audit](REPRODUCIBILITY_AUDIT_2026-10-13.md).
 
 ## Study design and analytical support
 
@@ -18,7 +18,7 @@ This is a **journal-neutral** research repository. Its code and outputs may be e
 
 The common-support input `data/analysis_ready/CAP500_FACTORIAL_PREDICTIONS.csv.gz` has **103,992** archived rows: 619 × 7 × 2 × 3 × 4. The *estimated* 2061–2080 period is not a native fourth period in this table.
 
-## Available executable check on this branch
+## Available executable verification
 
 From the repository root, install `requirements.txt` and run:
 
@@ -27,7 +27,7 @@ python code/00_verify_public_repository.py
 python code/01_reproduce_cap500_direct_periods.py
 ```
 
-The first script checks the archived CAP500 cell/model/scenario/period/state structure. The second recomputes cell-level factorial contrasts, their algebraic closure and area-weighted model-level summaries of the **three directly evaluated periods**. It writes new files under `generated_outputs/` and does not overwrite submitted/reference results.
+The first script checks the archived CAP500 cell/model/scenario/period/state structure. The second recomputes cell-level factorial contrasts, their algebraic closure and area-weighted model-level summaries of the **three directly evaluated periods**. Both succeeded in a GitHub Actions run; this checks only the deposited subset of the analysis. It writes new files under `generated_outputs/` and does not overwrite submitted/reference results.
 
 Do **not** interpret the outputs as a re-execution of the full model-training pipeline, Direct-Hou factorial predictions, or the original 2061–2080 emulation. For access to other compact v1.1.0 integration scripts and their generated files, consult the separately assembled research package and `RELEASE_STATUS.md`.
 
@@ -45,6 +45,6 @@ The 2023 UNOSAT six-cell comparison is **descriptive local evidence only**, not 
 - `DATA_AVAILABILITY.md` and `PROVENANCE_LIMITATIONS.md` — availability and interpretation boundaries.
 - `reference_outputs/current_reported/` — transcribed, **not recalculated**, manuscript-reported data tables.
 
-The associated manuscript cites Zenodo DOI **10.5281/zenodo.22713203**. This number is recorded as manuscript-reported; verification of the public Zenodo record and exact release contents remains separate from a GitHub check.
+The associated manuscript cites Zenodo DOI **10.5281/zenodo.22713203**. This is **manuscript-reported but has not been independently resolved or its files verified**; do not claim that the permanent archive has been verified. The archive's existence and contents must be checked by the corresponding author.
 
 Third-party datasets retain their provider terms. New code in this repository is under MIT where expressly licensed.

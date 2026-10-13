@@ -1,0 +1,12 @@
+check,target,reported,reimplemented,delta,units,notes
+CAP500_vs_RAW,SSP2-4.5_2021-2040,90.1,89.91897407617664,-0.18102592382336,percentage_points,different_tail_treatments
+CAP500_vs_RAW,SSP2-4.5_2041-2060,85.1,84.19962644081919,-0.90037355918081,percentage_points,different_tail_treatments
+CAP500_vs_RAW,SSP2-4.5_2081-2100,82.2,82.45261291560146,0.25261291560146,percentage_points,different_tail_treatments
+CAP500_vs_RAW,SSP5-8.5_2021-2040,81.8,81.76566411171157,-0.03433588828842,percentage_points,different_tail_treatments
+CAP500_vs_RAW,SSP5-8.5_2041-2060,75.1,74.95575896771007,-0.14424103228993,percentage_points,different_tail_treatments
+CAP500_vs_RAW,SSP5-8.5_2081-2100,69.2,69.2184245487167,0.0184245487167,percentage_points,different_tail_treatments
+2061_reimplementation,SSP2-4.5_CAP500,85.6,85.60793067462,0.00793067462,percentage_points,original_2061_script_unavailable
+2061_reimplementation,SSP5-8.5_CAP500,74.2,73.824368853826,-0.375631146174,percentage_points,original_2061_script_unavailable
+S19_spatial_meta_learning,Active_inactive_ROC_AUC,0.900,0.896514457136,-0.003485542864,ROC_AUC,approximate_reimplementation
+S19_spatial_meta_learning,Landscape_climate_ROC_AUC,0.771,0.758557929329,-0.012442070671,ROC_AUC,approximate_reimplementation
+S19_spatial_meta_learning,Response_sign_ROC_AUC,0.725,0.727355482733,0.002355482733,ROC_AUC,approximate_reimplementation
