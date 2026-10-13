@@ -1,8 +1,9 @@
-# Provenance and interpretation limitations
+# Scope and provenance limitations
 
-1. **Boundary:** the locked analytical geometry is the project-local `GRDC_VOLTA_POLITICAL_TRANSBOUNDARY_BASIN` derivative associated with the GRDC Major River Basins 2020 source package. The full sequence of historical intermediate GIS edits was not recoverable. The release therefore deposits/copies the exact locked geometry rather than claiming an undocumented transformation history.
-2. **Threshold:** the archived `p=0.14` operating point is not described as calibrated or cross-validation selected. Authentic outer-fold thresholds and pooled-OOF diagnostics are retained separately.
-3. **Phase5E supersession:** the original Phase5E factorial feature table is audit-only; final future SHAP and scenario-response interpretation use V7 `RAW_FACTORIAL_PREDICTIONS.csv.gz`, which contains corrected R10mm/R20mm future states.
-4. **LULC interface:** the harmonized MODIS–Hou implementation and Direct-Hou implementation are both scientifically informative structural representations. Direct-Hou is a sensitivity analysis, not an error condition.
-5. **Observation support:** GFD observation-support sensitivity is a same-source label-support sensitivity, not independent sensor validation.
-6. **Uncompleted extensions:** no clean event-matched Sentinel-1 independent-validation experiment, dynamic reservoir-operation experiment or dynamic SSP population experiment is claimed.
+1. **Archive boundaries:** The public GitHub repository and the separately assembled compact v1.1.0 ZIP do not automatically contain the full historical project directory. Older checklists naming absent model files, raw observation exports, or GIS inputs are not evidence those bytes were uploaded.
+2. **Direct versus estimated periods:** Three IPCC-assessment periods were directly evaluated; the 2061–2080* period was constructed by interpolation–emulation. The estimated period must not be mixed into a 103,992-row direct-period table as though it were an archived fourth climate simulation.
+3. **Interfaces:** Harmonized and Direct-Hou share climate forcing but use different future-LULC translation. Direct-Hou is an unharmonized sensitivity/stress test, not a physically validated alternative.
+4. **Validation scope:** The UNOSAT 2023 check has only six supported cells; it is descriptive local spatial ranking, not basin-wide or hydraulic validation.
+5. **Statistical nature:** The fitted random forest predicts satellite-derived flood occurrence conditional on sampled event years; the factorial attribution partitions a statistical response surface, not hydrological mass balance or causal fractions.
+6. **Concept drift:** Extrapolation and covariate-shift checks cannot non-circularly establish the future flood-response relation without future observed flood labels.
+7. **Reuse:** Third-party source data and derived products may have licensing/distribution constraints. Code licenses do not override those terms.

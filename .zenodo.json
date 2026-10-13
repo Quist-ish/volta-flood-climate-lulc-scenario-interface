@@ -1,25 +1,30 @@
 {
-  "title": "Reproducibility materials for scenario-interface uncertainty in future flood occurrence across the transboundary Volta Basin",
-  "version": "1.0.0",
+  "title": "Reproducibility materials for the Volta Basin climate–landscape flood-occurrence study",
   "upload_type": "software",
   "access_right": "open",
   "license": "mit",
+  "version": "1.1.0",
   "language": "eng",
-  "description": "Code, analysis-ready data, manifests, model records and audit artifacts supporting the climate-land-use counterfactual analysis of future flood occurrence across the transboundary Volta Basin.",
+  "description": "Journal-neutral research code and data verification for scenario-to-feature translation in Volta Basin flood occurrence. Three directly evaluated periods and one estimated 2061–2080 period are distinguished; original missing artifacts are not claimed to be present.",
   "creators": [
     {
-      "name": "Quist, Ishmeal"
+      "name": "Quist, Ishmeal",
+      "orcid": "0009-0009-0739-0359"
     }
   ],
   "keywords": [
     "Volta Basin",
     "flood occurrence",
+    "climate-landscape attribution",
     "CMIP6",
-    "land-use change",
-    "machine learning",
-    "random forest",
-    "factorial decomposition",
-    "scenario-interface uncertainty",
+    "scenario translation",
     "reproducibility"
+  ],
+  "related_identifiers": [
+    {
+      "identifier": "https://github.com/Quist-ish/volta-flood-climate-lulc-scenario-interface",
+      "relation": "isSupplementedBy",
+      "scheme": "url"
+    }
   ]
 }
